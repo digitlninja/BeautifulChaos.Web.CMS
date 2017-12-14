@@ -1,0 +1,68 @@
+<!-- hero -->
+@section Head {
+    <link href="~/lib/blueimp-gallery/css/blueimp-gallery.css" rel="stylesheet"/>
+}
+<section class="hero">
+    <div class="hero-overlay">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hero-content">
+                    <div class="col-md-12">
+                        <h2 class="text-center">See us in Action</h2>
+                        <p class="lead">High ceilings, pine wood flooring, great music, excellent coffee and a burning log fire add to the warmth and charm of our beautiful hair studio.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- /.hero -->
+
+<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+
+<div id="links">
+    <a href="http://placeimg.com/600/800/any" title="Photo 1">
+        <img src="http://placeimg.com/600/800/any" alt="Thumb 1" class="gallery-img">
+    </a>
+    <a href="http://placeimg.com/600/800/people" title="Photo 2">
+        <img src="http://placeimg.com/600/800/people" alt="Thumb 2" class="gallery-img">
+    </a>
+</div>
+<a href="http://placeimg.com/600/800/any" title="Photo 3">
+    <img src="http://placeimg.com/600/800/any" alt="Thumb 3" class="gallery-img">
+</a>
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">
+        <img src="/icons/arrow-scissors.svg" alt="scissors-next-icon">
+    </a>
+    <a class="next">
+        <img src="/icons/arrow-scissors.svg" alt="scissors-next-icon">
+    </a>
+    <a class="close">
+        <i class="fa fa-times"></i>
+    </a>
+    <a class="play-pause">
+        <i class="fa fa-play"></i>
+    </a>
+    <ol class="indicator">
+        <i class="fa fa-dot-circle-o"></i>
+    </ol>
+</div>
+
+
+@section scripts{
+    <script src="~/lib/blueimp-gallery/js/blueimp-gallery.min.js"></script>
+    <script>
+        document.getElementById('links').onclick = function(event) {
+            event = event || window.event;
+            var target = event.target || event.srcElement,
+                link = target.src ? target.parentNode : target,
+                options = { index: link, event: event },
+                links = this.getElementsByTagName('a');
+            blueimp.Gallery(links, options);
+        };
+    </script>
+}

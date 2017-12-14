@@ -1,0 +1,120 @@
+﻿@*@using Microsoft.AspNetCore.Mvc.Rendering*@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>@ViewData["Title"]</title>
+
+  <environment names="Development">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css"
+          asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.css"
+          asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"/>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700|Roboto:400,700" rel="stylesheet">
+
+    <!-- custom styles -->
+    <link rel="stylesheet" href="~/css/site.css"/>
+  </environment>
+  <environment names="Staging,Production">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css"
+          asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.css"
+          asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"/>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700|Roboto:400,700" rel="stylesheet">
+    @RenderSection("Head", false)
+    <!-- custom styles -->
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true"/>
+  </environment>
+@**@
+@*  <script src="../node_modules/core-js/client/shim.min.js"></script>*@
+@*  <script src="../node_modules/zone.js/dist/zone.js"></script>*@
+@*  <script src="../node_modules/systemjs/dist/system.src.js"></script>*@
+@*  <script src="../src/systemjs.config.js"></script>*@
+@*  $1$  <script src="~/systemjs.config.js"></script>#1#*@
+@* *@
+
+</head>
+
+<body id="override">
+
+@{Html.RenderPartial("MainNavigtaion");}
+<section class="container-main">
+ 
+  @RenderBody()
+</section>
+    
+@{Html.RenderPartial("MainFooter");}
+
+<environment names="Development">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.0.0.js" asp-fallback-src="~/lib/jquery/dist/jquery.js"
+            asp-fallback-test="window.jQuery"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</environment>
+<environment names="Staging,Production">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.0.0.js" asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"></script>
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true"/>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</environment>
+<script>
+    document.getElementById('get-directions').addEventListener('click', getDirected);
+
+    // Get Directions link
+    function getDirected() {
+        var queryStringFirst = window.location.search.slice(1);
+
+        navigator.geolocation.getCurrentPosition(function(data) {
+            if (data.coords) {
+
+                var address = 'https://maps.google.co.za/maps?saddr=' + data.coords.latitude;
+                address += ',' + data.coords.longitude + '&daddr=' + queryStringFirst;
+                address += "104+Main+Rd,+Fish+Hoek,+Cape+Town,+7990";
+
+                window.location.href = address;
+
+            }
+        });
+    }
+
+    // nav scroll color change
+    $(window).scroll(function() {
+        if ($('.navbar').offset().top > 100) {
+            $('.navbar-fixed-top').addClass('top-nav-collapse');
+            // $('#override .navbar-collapse').addClass('blue-bg');
+        } else {
+            $('.navbar-fixed-top').removeClass('top-nav-collapse');
+            //$('#override .navbar-collapse').removeClass('blue-bg');
+        }
+    });
+
+</script>
+<div id="fb-root"></div>
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=271255683345323";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+@RenderSection("scripts", required: false)
+</body>
+</html>

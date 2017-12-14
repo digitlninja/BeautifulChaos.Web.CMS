@@ -1,17 +1,45 @@
-﻿@{
-    ViewData["Title"] = "Contact";
+@{
+    ViewData["Title"] = "About";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<!-- hero -->
+<div class="contact-page">
+    <div class="contact-container">
+        <div class="container-fluid">
+            <div class="row text-white">
+                <h2 class="text-center">Contact us</h2>
+                <p class="lead text-center">We're here for your hair.</p>
+            <div class="row">
+                    <div class="contact">
+                        <form class="" action="/" method="post">
+                            <div class="group">      
+                                <input type="text" name="name" value="" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Name</label>
+                            </div>
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+                            <div class="group">      
+                                <input type="email" name="email" value="" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Email</label>
+                            </div>
+                            
+                            <div class="group">
+                                <textarea placeholder="Message" value=""></textarea>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                            </div>
+                           
+                           
+                            <input type="submit" value="SEND" class="btn btn-primary"/>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+    </div>
+<!-- /.hero -->

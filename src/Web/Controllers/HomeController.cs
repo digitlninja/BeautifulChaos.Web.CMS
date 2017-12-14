@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Web.Models;
 
 namespace Web.Controllers
 {
@@ -15,23 +9,34 @@ namespace Web.Controllers
             return View();
         }
 
+        [Route("about")]
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
+        [Route("services")]
+        public IActionResult Services()
+        {
+            return View();
+        }
+
+        [Route("work")]
+        public IActionResult Work()
+        {
+            return View();
+        }
+
+        [Route("testimonials")]
+        public IActionResult Testimonials()
+        {
+            return View();
+        }
+
+        [Route("contact")]
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
-        }
-
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
