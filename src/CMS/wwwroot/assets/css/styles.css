@@ -21239,3 +21239,36 @@ footer {
 .card .card-header h4 {
     color: #f9f9f9 !important;
 }
+
+.form-title {
+    border-bottom: 1px solid #ef5350;
+    color: #ef5350;
+    border-radius: 3px;
+    padding: 15px;
+    background: #fff;
+}
+
+.form-section-title {
+    padding: 20px 0 20px 60px;
+    color: #999;
+}
+
+.helper-text {
+    margin: 20px 0 0 0;
+}
+
+.nav-pills:not(.nav-pills-icons) > li > a {
+     border-radius: 0;
+}
+
+.nav-pills > li > a {
+    border-radius: 0;
+}
+
+.tab-content {
+    padding-top: 30px;
+}
+
+nav > div > div.navbar-header > a {
+    padding-left: 30px !important;
+}

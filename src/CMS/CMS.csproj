@@ -9,10 +9,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include=" Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.0.1" />
+    <PackageReference Include=" Microsoft.IdentityModel.Tokens" Version="5.1.4" />
+    <PackageReference Include="  System.IdentityModel.Tokens.Jwt" Version="5.1.4" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+    
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +26,11 @@
 
   <ItemGroup>
     <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
+    <Compile Remove="assets\**" />
+    <Content Remove="assets\**" />
     <Content Remove="ClientApp\**" />
+    <EmbeddedResource Remove="assets\**" />
+    <None Remove="assets\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -200,7 +208,7 @@
     <Content Remove="wwwroot\assets\js\material-dashboard-angular.js" />
     <Content Remove="wwwroot\assets\js\plugins\bootstrap-datetimepicker.js" />
     <Content Remove="wwwroot\assets\js\plugins\bootstrap-notify.js" />
-    <Content Remove="wwwroot\assets\js\plugins\chartist.min.js" />
+    <Content Remove="wwwroot\assets\js\plugins\chartist - Copy.min.js" />
     <Content Remove="wwwroot\assets\js\plugins\es6-promise-auto.min.js" />
     <Content Remove="wwwroot\assets\js\plugins\fullcalendar.min.js" />
     <Content Remove="wwwroot\assets\js\plugins\jasny-bootstrap.min.js" />
@@ -444,7 +452,7 @@
     <None Include="wwwroot\assets\js\material-dashboard-angular.js" />
     <None Include="wwwroot\assets\js\plugins\bootstrap-datetimepicker.js" />
     <None Include="wwwroot\assets\js\plugins\bootstrap-notify.js" />
-    <None Include="wwwroot\assets\js\plugins\chartist.min.js" />
+    <None Include="wwwroot\assets\js\plugins\chartist - Copy.min.js" />
     <None Include="wwwroot\assets\js\plugins\es6-promise-auto.min.js" />
     <None Include="wwwroot\assets\js\plugins\fullcalendar.min.js" />
     <None Include="wwwroot\assets\js\plugins\jasny-bootstrap.min.js" />
@@ -507,6 +515,14 @@
     <None Include="wwwroot\assets\sass\material-dashboard\_togglebutton.scss" />
     <None Include="wwwroot\assets\sass\material-dashboard\_typography.scss" />
     <None Include="wwwroot\assets\sass\material-dashboard\_variables.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

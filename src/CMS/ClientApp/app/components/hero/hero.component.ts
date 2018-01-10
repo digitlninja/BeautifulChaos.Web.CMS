@@ -7,6 +7,5 @@
 })
 /** hero component*/
 export class HeroComponent {
-    /** hero ctor */
     
 }

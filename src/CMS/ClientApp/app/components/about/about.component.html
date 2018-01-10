@@ -1,0 +1,41 @@
+﻿    <div class="container-fluid">
+        <div class="col-md-12">
+            <form>
+                <ul class="nav nav-pills nav-pills-warning">
+
+                    <li class="active">
+                        <a href="#hero" data-toggle="tab">Hero</a>
+                    </li>
+                    <li>
+                        <a href="#intro" data-toggle="tab">Introduction</a>
+                    </li>
+
+                    <li>
+                        <a href="#team" data-toggle="tab">Team</a>
+                    </li> 
+                    <li>
+                        <a href="#info" data-toggle="tab">Info</a>
+                    </li>
+                    <li>
+                        <a href="#gallery" data-toggle="tab">Gallery</a>
+                    </li>
+
+                </ul>
+                
+                <div class="tab-content">
+                    
+                    <hero-editor class="tab-pane active" id="hero"></hero-editor>
+
+                    <introduction class="tab-pane" id="intro"></introduction>
+                    
+                    <introduction class="tab-pane" id="team" [headTitle]="'Team'"></introduction>
+                    
+                    <info-block class="tab-pane" id="info"></info-block>
+
+                    <gallery-upload class="tab-pane" id="gallery" [headTitle]="'Salon'"></gallery-upload>
+
+                </div>
+              
+            </form>
+        </div>
+    </div>
