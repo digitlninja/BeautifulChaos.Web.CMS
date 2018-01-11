@@ -1,9 +1,7 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Threading.Tasks;
 using CMS.Models;
-using MailKit.Net.Smtp;
-using Microsoft.Extensions.Configuration;
+using CMS.Models.ViewModels;
 using Microsoft.Extensions.Options;
 using MimeKit;
 using SendGrid;

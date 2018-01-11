@@ -1,0 +1,87 @@
+@{
+    Layout = null;
+}
+@model CMS.Models.ViewModels.RegisterViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Register</title>
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="~/assets/css/login.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+
+        <!-- Mixins-->
+        <!-- Pen Title-->
+        <div class="pen-title">
+            <h1>Admin Register</h1>
+        </div>
+        <div class="container">
+            <div class="card"></div>
+            <div class="card">
+                <h1 class="title">Register</h1>
+                <form asp-controller="Account" asp-action="Register" method="post" class="register-form">
+                        <div asp-validation-summary="All" class="text-danger input-container no-padding"></div>
+                    <div class="input-container">
+                        <input asp-for="Username" type="text" id="Username" required="required"/>
+                        <label asp-for="Username">Username</label>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="input-container">
+                        <input asp-for="Email" type="text" id="Email" required="required"/>
+                        <label asp-for="Email">Email</label>
+                        <div class="bar"></div>
+                        <div class="error-container">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <input asp-for="Password" type="password" id="Password" required="required"/>
+                        <label asp-for="Password">Password</label>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="input-container">
+                        <input asp-for="ConfirmPassword" type="password" id="ConfirmPassword" required="required"/>
+                        <label asp-for="ConfirmPassword">Confirm Password</label>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit">
+                            <span>Go</span>
+                        </button>
+                    </div>
+                    @*<div class="footer"><a href="#">Forgot your password?</a></div>*@
+                    @if (Model != null)
+                    {
+                        if (Model.Succeeded)
+                        {
+                            <div class="input-container text-center text-primary">
+                                <h3 class="lead">Click the link in your email inbox to confirm your registration.</h3>
+                            </div>
+                        }
+                        else
+                        {
+                            if (ViewData.ModelState.IsValid)
+                            {
+                                <div class="error-container text-center text-danger">
+                                    <span>Mail not sent.</span>
+                                </div>
+                            }
+                        }
+                    }
+                </form>
+                <div class="button-container">
+                    <a href="/admin/login" class="login-button btn btn-default">Login</a>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio-->
+    </div>
+</div>
+</body>
+</html>

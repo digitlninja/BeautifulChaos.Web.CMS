@@ -6,12 +6,22 @@
     <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
+  
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
-    <PackageReference Include=" Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.0.1" />
-    <PackageReference Include=" Microsoft.IdentityModel.Tokens" Version="5.1.4" />
-    <PackageReference Include="  System.IdentityModel.Tokens.Jwt" Version="5.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.1.4" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.1.4" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="7.3.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,249 +45,13 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\assets\.DS_Store" />
-    <Content Remove="wwwroot\assets\css\bootstrap.min.css" />
-    <Content Remove="wwwroot\assets\css\demo.css" />
-    <Content Remove="wwwroot\assets\css\material-dashboard.css" />
-    <Content Remove="wwwroot\assets\css\material-dashboard.css.map" />
-    <Content Remove="wwwroot\assets\img\.DS_Store" />
-    <Content Remove="wwwroot\assets\img\angular2-logo-white.png" />
-    <Content Remove="wwwroot\assets\img\angular2-logo.png" />
-    <Content Remove="wwwroot\assets\img\apple-icon.png" />
-    <Content Remove="wwwroot\assets\img\bg-pricing.jpeg" />
-    <Content Remove="wwwroot\assets\img\card-1.jpeg" />
-    <Content Remove="wwwroot\assets\img\card-2.jpeg" />
-    <Content Remove="wwwroot\assets\img\card-3.jpeg" />
-    <Content Remove="wwwroot\assets\img\default-avatar.png" />
-    <Content Remove="wwwroot\assets\img\faces\avatar.jpg" />
-    <Content Remove="wwwroot\assets\img\faces\card-profile1-square.jpg" />
-    <Content Remove="wwwroot\assets\img\faces\card-profile2-square.jpg" />
-    <Content Remove="wwwroot\assets\img\faces\marc.jpg" />
-    <Content Remove="wwwroot\assets\img\favicon.png" />
-    <Content Remove="wwwroot\assets\img\flags\AD.png" />
-    <Content Remove="wwwroot\assets\img\flags\AE.png" />
-    <Content Remove="wwwroot\assets\img\flags\AG.png" />
-    <Content Remove="wwwroot\assets\img\flags\AM.png" />
-    <Content Remove="wwwroot\assets\img\flags\AR.png" />
-    <Content Remove="wwwroot\assets\img\flags\AT.png" />
-    <Content Remove="wwwroot\assets\img\flags\AU.png" />
-    <Content Remove="wwwroot\assets\img\flags\BE.png" />
-    <Content Remove="wwwroot\assets\img\flags\BF.png" />
-    <Content Remove="wwwroot\assets\img\flags\BG.png" />
-    <Content Remove="wwwroot\assets\img\flags\BO.png" />
-    <Content Remove="wwwroot\assets\img\flags\BR.png" />
-    <Content Remove="wwwroot\assets\img\flags\CA.png" />
-    <Content Remove="wwwroot\assets\img\flags\CD.png" />
-    <Content Remove="wwwroot\assets\img\flags\CG.png" />
-    <Content Remove="wwwroot\assets\img\flags\CH.png" />
-    <Content Remove="wwwroot\assets\img\flags\CL.png" />
-    <Content Remove="wwwroot\assets\img\flags\CM.png" />
-    <Content Remove="wwwroot\assets\img\flags\CN.png" />
-    <Content Remove="wwwroot\assets\img\flags\CO.png" />
-    <Content Remove="wwwroot\assets\img\flags\CZ.png" />
-    <Content Remove="wwwroot\assets\img\flags\DE.png" />
-    <Content Remove="wwwroot\assets\img\flags\DJ.png" />
-    <Content Remove="wwwroot\assets\img\flags\DK.png" />
-    <Content Remove="wwwroot\assets\img\flags\DZ.png" />
-    <Content Remove="wwwroot\assets\img\flags\EE.png" />
-    <Content Remove="wwwroot\assets\img\flags\EG.png" />
-    <Content Remove="wwwroot\assets\img\flags\ES.png" />
-    <Content Remove="wwwroot\assets\img\flags\FI.png" />
-    <Content Remove="wwwroot\assets\img\flags\FR.png" />
-    <Content Remove="wwwroot\assets\img\flags\GA.png" />
-    <Content Remove="wwwroot\assets\img\flags\GB.png" />
-    <Content Remove="wwwroot\assets\img\flags\GM.png" />
-    <Content Remove="wwwroot\assets\img\flags\GT.png" />
-    <Content Remove="wwwroot\assets\img\flags\HN.png" />
-    <Content Remove="wwwroot\assets\img\flags\HT.png" />
-    <Content Remove="wwwroot\assets\img\flags\HU.png" />
-    <Content Remove="wwwroot\assets\img\flags\ID.png" />
-    <Content Remove="wwwroot\assets\img\flags\IE.png" />
-    <Content Remove="wwwroot\assets\img\flags\IL.png" />
-    <Content Remove="wwwroot\assets\img\flags\IN.png" />
-    <Content Remove="wwwroot\assets\img\flags\IQ.png" />
-    <Content Remove="wwwroot\assets\img\flags\IR.png" />
-    <Content Remove="wwwroot\assets\img\flags\IT.png" />
-    <Content Remove="wwwroot\assets\img\flags\JM.png" />
-    <Content Remove="wwwroot\assets\img\flags\JO.png" />
-    <Content Remove="wwwroot\assets\img\flags\JP.png" />
-    <Content Remove="wwwroot\assets\img\flags\KG.png" />
-    <Content Remove="wwwroot\assets\img\flags\KN.png" />
-    <Content Remove="wwwroot\assets\img\flags\KP.png" />
-    <Content Remove="wwwroot\assets\img\flags\KR.png" />
-    <Content Remove="wwwroot\assets\img\flags\KW.png" />
-    <Content Remove="wwwroot\assets\img\flags\KZ.png" />
-    <Content Remove="wwwroot\assets\img\flags\LA.png" />
-    <Content Remove="wwwroot\assets\img\flags\LB.png" />
-    <Content Remove="wwwroot\assets\img\flags\LC.png" />
-    <Content Remove="wwwroot\assets\img\flags\LS.png" />
-    <Content Remove="wwwroot\assets\img\flags\LU.png" />
-    <Content Remove="wwwroot\assets\img\flags\LV.png" />
-    <Content Remove="wwwroot\assets\img\flags\MG.png" />
-    <Content Remove="wwwroot\assets\img\flags\MK.png" />
-    <Content Remove="wwwroot\assets\img\flags\ML.png" />
-    <Content Remove="wwwroot\assets\img\flags\MM.png" />
-    <Content Remove="wwwroot\assets\img\flags\MT.png" />
-    <Content Remove="wwwroot\assets\img\flags\MX.png" />
-    <Content Remove="wwwroot\assets\img\flags\NA.png" />
-    <Content Remove="wwwroot\assets\img\flags\NE.png" />
-    <Content Remove="wwwroot\assets\img\flags\NG.png" />
-    <Content Remove="wwwroot\assets\img\flags\NI.png" />
-    <Content Remove="wwwroot\assets\img\flags\NL.png" />
-    <Content Remove="wwwroot\assets\img\flags\NO.png" />
-    <Content Remove="wwwroot\assets\img\flags\OM.png" />
-    <Content Remove="wwwroot\assets\img\flags\PA.png" />
-    <Content Remove="wwwroot\assets\img\flags\PE.png" />
-    <Content Remove="wwwroot\assets\img\flags\PG.png" />
-    <Content Remove="wwwroot\assets\img\flags\PK.png" />
-    <Content Remove="wwwroot\assets\img\flags\PL.png" />
-    <Content Remove="wwwroot\assets\img\flags\PT.png" />
-    <Content Remove="wwwroot\assets\img\flags\PY.png" />
-    <Content Remove="wwwroot\assets\img\flags\QA.png" />
-    <Content Remove="wwwroot\assets\img\flags\RO.png" />
-    <Content Remove="wwwroot\assets\img\flags\RU.png" />
-    <Content Remove="wwwroot\assets\img\flags\RW.png" />
-    <Content Remove="wwwroot\assets\img\flags\SA.png" />
-    <Content Remove="wwwroot\assets\img\flags\SE.png" />
-    <Content Remove="wwwroot\assets\img\flags\SG.png" />
-    <Content Remove="wwwroot\assets\img\flags\SL.png" />
-    <Content Remove="wwwroot\assets\img\flags\SN.png" />
-    <Content Remove="wwwroot\assets\img\flags\SO.png" />
-    <Content Remove="wwwroot\assets\img\flags\SV.png" />
-    <Content Remove="wwwroot\assets\img\flags\TD.png" />
-    <Content Remove="wwwroot\assets\img\flags\TJ.png" />
-    <Content Remove="wwwroot\assets\img\flags\TL.png" />
-    <Content Remove="wwwroot\assets\img\flags\TR.png" />
-    <Content Remove="wwwroot\assets\img\flags\TZ.png" />
-    <Content Remove="wwwroot\assets\img\flags\UA.png" />
-    <Content Remove="wwwroot\assets\img\flags\US.png" />
-    <Content Remove="wwwroot\assets\img\flags\VE.png" />
-    <Content Remove="wwwroot\assets\img\flags\VN.png" />
-    <Content Remove="wwwroot\assets\img\flags\YE.png" />
-    <Content Remove="wwwroot\assets\img\header-doc.jpeg" />
-    <Content Remove="wwwroot\assets\img\image_placeholder.jpg" />
-    <Content Remove="wwwroot\assets\img\lock.jpeg" />
-    <Content Remove="wwwroot\assets\img\login.jpeg" />
-    <Content Remove="wwwroot\assets\img\mask.png" />
-    <Content Remove="wwwroot\assets\img\new_logo.png" />
-    <Content Remove="wwwroot\assets\img\placeholder.jpg" />
-    <Content Remove="wwwroot\assets\img\product1.jpg" />
-    <Content Remove="wwwroot\assets\img\product2.jpg" />
-    <Content Remove="wwwroot\assets\img\product3.jpg" />
-    <Content Remove="wwwroot\assets\img\register.jpeg" />
-    <Content Remove="wwwroot\assets\img\sidebar-1.jpg" />
-    <Content Remove="wwwroot\assets\img\sidebar-2.jpg" />
-    <Content Remove="wwwroot\assets\img\sidebar-3.jpg" />
-    <Content Remove="wwwroot\assets\img\sidebar-4.jpg" />
-    <Content Remove="wwwroot\assets\js\core\arrive.js" />
-    <Content Remove="wwwroot\assets\js\core\bootstrap.min.js" />
-    <Content Remove="wwwroot\assets\js\core\jquery-3.1.1.min.js" />
-    <Content Remove="wwwroot\assets\js\core\jquery-ui.min.js" />
-    <Content Remove="wwwroot\assets\js\core\jquery.validate.min.js" />
-    <Content Remove="wwwroot\assets\js\core\material.min.js" />
-    <Content Remove="wwwroot\assets\js\core\perfect-scrollbar.jquery.min.js" />
-    <Content Remove="wwwroot\assets\js\demo.js" />
-    <Content Remove="wwwroot\assets\js\init\charts.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\charts.js" />
-    <Content Remove="wwwroot\assets\js\init\initAniCharts.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\initAniCharts.js" />
-    <Content Remove="wwwroot\assets\js\init\initChartsPage.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\initChartsPage.js" />
-    <Content Remove="wwwroot\assets\js\init\initCollapseArea.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\initCollapseArea.js" />
-    <Content Remove="wwwroot\assets\js\init\initDataTable.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\initDataTable.js" />
-    <Content Remove="wwwroot\assets\js\init\initDatetimepickers.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\initDatetimepickers.js" />
-    <Content Remove="wwwroot\assets\js\init\initFullCalendar.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\initFullCalendar.js" />
-    <Content Remove="wwwroot\assets\js\init\initFullScreenpage.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\initFullScreenpage.js" />
-    <Content Remove="wwwroot\assets\js\init\initMaps.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\initMaps.js" />
-    <Content Remove="wwwroot\assets\js\init\initMenu.js" />
-    <Content Remove="wwwroot\assets\js\init\initSliders.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\initSliders.js" />
-    <Content Remove="wwwroot\assets\js\init\initTooltips.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\initTooltips.js" />
-    <Content Remove="wwwroot\assets\js\init\initVectorMap.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\initVectorMap.js" />
-    <Content Remove="wwwroot\assets\js\init\initWizard.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\initWizard.js" />
-    <Content Remove="wwwroot\assets\js\init\notify.d.ts" />
-    <Content Remove="wwwroot\assets\js\init\notify.js" />
-    <Content Remove="wwwroot\assets\js\material-dashboard-angular.js" />
-    <Content Remove="wwwroot\assets\js\plugins\bootstrap-datetimepicker.js" />
-    <Content Remove="wwwroot\assets\js\plugins\bootstrap-notify.js" />
-    <Content Remove="wwwroot\assets\js\plugins\chartist - Copy.min.js" />
-    <Content Remove="wwwroot\assets\js\plugins\es6-promise-auto.min.js" />
-    <Content Remove="wwwroot\assets\js\plugins\fullcalendar.min.js" />
-    <Content Remove="wwwroot\assets\js\plugins\jasny-bootstrap.min.js" />
-    <Content Remove="wwwroot\assets\js\plugins\jquery-jvectormap.js" />
-    <Content Remove="wwwroot\assets\js\plugins\jquery.bootstrap-wizard.js" />
-    <Content Remove="wwwroot\assets\js\plugins\jquery.datatables.js" />
-    <Content Remove="wwwroot\assets\js\plugins\jquery.select-bootstrap.js" />
-    <Content Remove="wwwroot\assets\js\plugins\jquery.tagsinput.js" />
-    <Content Remove="wwwroot\assets\js\plugins\moment.min.js" />
-    <Content Remove="wwwroot\assets\js\plugins\nouislider.min.js" />
-    <Content Remove="wwwroot\assets\js\plugins\sweetalert2.min.js" />
-    <Content Remove="wwwroot\assets\js\sidebar-moving-tab.js" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\mixins\_chartist.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\mixins\_sidebar-color.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\mixins\_transparency.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\mixins\_vendor-prefixes.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\plugins\_animate.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\plugins\_chartist.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\plugins\_datatables.net.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\plugins\_fullcalendar.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\plugins\_jquery.jvectormap.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\plugins\_perfect-scrollbar.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\plugins\_plugin-datetime-picker.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\plugins\_plugin-nouislider.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\plugins\_select-bootstrap.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\plugins\_sweetalert2.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\plugins\_wizard-card.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_alerts.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_buttons.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_cards.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_checkboxes.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_colors.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_dialogs.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_dropdown.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_fileupload.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_footers.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_forms.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_inputs-size.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_inputs.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_labels.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_misc.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_mixins.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_navbars.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_pages.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_pagination.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_panels.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_pills.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_popups.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_progress.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_radios.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_responsive.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_ripples.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_shadows.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_sidebar-and-main-panel.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_tables.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_tabs.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_tags.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_timeline.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_togglebutton.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_typography.scss" />
-    <Content Remove="wwwroot\assets\sass\material-dashboard\_variables.scss" />
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\assets\css\bootstrap.min.css" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <None Include="Views\Account\ConfirmEmail.cshtml" />
+    <None Include="Views\Account\Login.cshtml" />
+    <None Include="Views\Account\Register.cshtml" />
+    <None Include="Views\Dashboard\Index.cshtml" />
     <None Include="wwwroot\assets\.DS_Store" />
     <None Include="wwwroot\assets\css\bootstrap.min.css" />
     <None Include="wwwroot\assets\css\demo.css" />
@@ -412,6 +186,10 @@
     <None Include="wwwroot\assets\img\sidebar-2.jpg" />
     <None Include="wwwroot\assets\img\sidebar-3.jpg" />
     <None Include="wwwroot\assets\img\sidebar-4.jpg" />
+    <None Include="wwwroot\assets\js\arrive.min.js" />
+    <None Include="wwwroot\assets\js\bootstrap-notify.js" />
+    <None Include="wwwroot\assets\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\js\chartist.min.js" />
     <None Include="wwwroot\assets\js\core\arrive.js" />
     <None Include="wwwroot\assets\js\core\bootstrap.min.js" />
     <None Include="wwwroot\assets\js\core\jquery-3.1.1.min.js" />
@@ -449,7 +227,11 @@
     <None Include="wwwroot\assets\js\init\initWizard.js" />
     <None Include="wwwroot\assets\js\init\notify.d.ts" />
     <None Include="wwwroot\assets\js\init\notify.js" />
+    <None Include="wwwroot\assets\js\jquery-3.2.1.min.js" />
     <None Include="wwwroot\assets\js\material-dashboard-angular.js" />
+    <None Include="wwwroot\assets\js\material-dashboard.js" />
+    <None Include="wwwroot\assets\js\material.min.js" />
+    <None Include="wwwroot\assets\js\perfect-scrollbar.jquery.min.js" />
     <None Include="wwwroot\assets\js\plugins\bootstrap-datetimepicker.js" />
     <None Include="wwwroot\assets\js\plugins\bootstrap-notify.js" />
     <None Include="wwwroot\assets\js\plugins\chartist - Copy.min.js" />
@@ -515,10 +297,44 @@
     <None Include="wwwroot\assets\sass\material-dashboard\_togglebutton.scss" />
     <None Include="wwwroot\assets\sass\material-dashboard\_typography.scss" />
     <None Include="wwwroot\assets\sass\material-dashboard\_variables.scss" />
+    <None Include="wwwroot\assets\sass\md\mixins\_chartist.scss" />
+    <None Include="wwwroot\assets\sass\md\mixins\_transparency.scss" />
+    <None Include="wwwroot\assets\sass\md\mixins\_vendor-prefixes.scss" />
+    <None Include="wwwroot\assets\sass\md\plugins\_animate.scss" />
+    <None Include="wwwroot\assets\sass\md\plugins\_perfect-scrollbar.scss" />
+    <None Include="wwwroot\assets\sass\md\plugins\_plugin-nouislider.scss" />
+    <None Include="wwwroot\assets\sass\md\_alerts.scss" />
+    <None Include="wwwroot\assets\sass\md\_buttons.scss" />
+    <None Include="wwwroot\assets\sass\md\_cards.scss" />
+    <None Include="wwwroot\assets\sass\md\_chartist.scss" />
+    <None Include="wwwroot\assets\sass\md\_checkboxes.scss" />
+    <None Include="wwwroot\assets\sass\md\_colors.scss" />
+    <None Include="wwwroot\assets\sass\md\_dialogs.scss" />
+    <None Include="wwwroot\assets\sass\md\_dropdown.scss" />
+    <None Include="wwwroot\assets\sass\md\_footers.scss" />
+    <None Include="wwwroot\assets\sass\md\_forms.scss" />
+    <None Include="wwwroot\assets\sass\md\_inputs-size.scss" />
+    <None Include="wwwroot\assets\sass\md\_inputs.scss" />
+    <None Include="wwwroot\assets\sass\md\_misc.scss" />
+    <None Include="wwwroot\assets\sass\md\_mixins.scss" />
+    <None Include="wwwroot\assets\sass\md\_navbars.scss" />
+    <None Include="wwwroot\assets\sass\md\_pagination.scss" />
+    <None Include="wwwroot\assets\sass\md\_pills.scss" />
+    <None Include="wwwroot\assets\sass\md\_popups.scss" />
+    <None Include="wwwroot\assets\sass\md\_radios.scss" />
+    <None Include="wwwroot\assets\sass\md\_responsive.scss" />
+    <None Include="wwwroot\assets\sass\md\_ripples.scss" />
+    <None Include="wwwroot\assets\sass\md\_shadows.scss" />
+    <None Include="wwwroot\assets\sass\md\_sidebar-and-main-panel.scss" />
+    <None Include="wwwroot\assets\sass\md\_tables.scss" />
+    <None Include="wwwroot\assets\sass\md\_tabs.scss" />
+    <None Include="wwwroot\assets\sass\md\_togglebutton.scss" />
+    <None Include="wwwroot\assets\sass\md\_typography.scss" />
+    <None Include="wwwroot\assets\sass\md\_variables.scss" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
+    <Folder Include="wwwroot\NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>

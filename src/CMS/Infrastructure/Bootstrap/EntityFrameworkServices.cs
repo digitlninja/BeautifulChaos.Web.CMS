@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Data.Infrastructure.Bootstrap
+namespace CMS.Infrastructure.Bootstrap
 {
     public static class EntityFrameworkServices
     {

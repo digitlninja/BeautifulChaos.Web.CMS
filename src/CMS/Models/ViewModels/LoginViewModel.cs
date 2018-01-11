@@ -1,7 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using FluentValidation.Attributes;
 
-namespace CMS.Models
+namespace CMS.Models.ViewModels
 {
+    [Validator(typeof(LoginViewModel))]
     public class LoginViewModel
     {
         [Required]
@@ -9,7 +11,6 @@ namespace CMS.Models
 
         [Required]
         [DataType(DataType.Password)]
-        [MinLength(8, ErrorMessage = "For security reasons, Please make your password a minimum of 8 characters.")]
         public string Password { get; set; }
     }
 }

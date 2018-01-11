@@ -8,7 +8,6 @@ namespace Data.Contexts
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            
         }
     }
 }

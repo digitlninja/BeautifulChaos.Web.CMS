@@ -1,7 +1,6 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace CMS.Models
+namespace CMS.Models.ViewModels
 {
     public class RegisterViewModel
     {

@@ -5,11 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using CMS.Interfaces;
 using CMS.Services;
 using Data.Entities.Identity;
-using CMS.Models;
+using CMS.Models.ViewModels;
 
 namespace CMS.Controllers
 {
-    [Area("Admin")]
     [Route("admin")]
     // ReSharper disable JoinNullCheckWithUsage
     public class AccountController : Controller
@@ -18,6 +17,10 @@ namespace CMS.Controllers
         private SignInManager<ApplicationUser> SignInManager { get; }
         private IMailService MailService { get; }
         public IAccountService AccountService { get; }
+
+        // JWT
+        //private readonly IJwtFactory JwtFactory;
+        //private readonly JwtIssuerOptions JwtOptions;
 
         public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,
             IMailService mailService, IAccountService accountService)
@@ -35,6 +38,10 @@ namespace CMS.Controllers
             this.SignInManager = signInManager;
             this.MailService = mailService;
             AccountService = accountService;
+
+            //this.JwtFactory = jwtFactory;
+            //this.JwtOptions = jwtOptions.Value;
+
         }
 
         [HttpGet]
@@ -89,6 +96,31 @@ namespace CMS.Controllers
             return View(model);
         }
 
+        #region JWT Login
+        /// <summary>
+        /// Finds user in database, if exists generates JWT and returns.
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        //        [HttpPost]
+        //        [Route("login")]
+        //        public async Task<IActionResult> Login([FromBody]LoginViewModel model)
+        //        {
+        //            if (!ModelState.IsValid)
+        //                return await Task.Run(() => View(model) );
+        //
+        //            var isAllowed = this.AccountService.Authorize(model);
+        //
+        //            if (isAllowed.Result)
+        //            {
+        //                return await Task.Run(() => RedirectToAction("Index", "Home") );
+        //            }
+        //
+        //            return Ok();
+        //        }
+        #endregion
+
+
         [HttpPost]
         [Route("login")]
         [ValidateAntiForgeryToken]
@@ -107,7 +139,7 @@ namespace CMS.Controllers
                 return View("Login", model);
             }
 
-            return RedirectToAction("Index", "Dashboard");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
@@ -145,5 +177,10 @@ namespace CMS.Controllers
             var confirmMsg = $"Please confirm your account by clicking this link: <a href='{callbackUrl}'>link</a>";
             return confirmMsg;
         }
+
+
+
+        // JWT
+       
     }
 }

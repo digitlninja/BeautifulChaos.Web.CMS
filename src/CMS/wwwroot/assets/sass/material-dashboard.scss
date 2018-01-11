@@ -1,66 +1,57 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
 /*!
 
  =========================================================
- * Material Dashboard PRO Angular 2 - V1.0.1
+ * Material Dashboard - v1.2.0
  =========================================================
 
- * Product Page: https://www.creative-tim.com/product/material-dashboard-pro-angular2
- * Copyright 2017 Creative Tim (https://www.creative-tim.com)
- * License Creative Tim (https://www.creative-tim.com/license)
+ * Product Page: http://www.creative-tim.com/product/material-dashboard
+ * Copyright 2017 Creative Tim (http://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
 
  =========================================================
 
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  */
+
+
 //variables and mixins
-@import "material-dashboard/variables";
-@import "material-dashboard/mixins";
-@import "material-dashboard/shadows";
+@import "../_scss/md/variables";
+@import "../_scss/md/mixins";
+@import "../_scss/md/shadows";
 
 //plugin css
-@import "material-dashboard/plugins/plugin-nouislider";
-@import "material-dashboard/plugins/animate";
-@import "material-dashboard/plugins/sweetalert2";
-@import "material-dashboard/plugins/datatables.net";
-@import "material-dashboard/plugins/jquery.jvectormap";
-@import "material-dashboard/plugins/plugin-datetime-picker";
-@import "material-dashboard/plugins/fullcalendar";
-@import "material-dashboard/plugins/wizard-card";
-@import "material-dashboard/plugins/chartist";
-@import "material-dashboard/plugins/select-bootstrap";
-@import "material-dashboard/plugins/perfect-scrollbar";
-
+@import "../_scss/md/plugins/_plugin-nouislider";
+@import "../_scss/md/plugins/_animate";
+@import "../_scss/md/plugins/_perfect-scrollbar";
 
 // Core CSS
-@import "material-dashboard/typography";
-@import "material-dashboard/sidebar-and-main-panel";
-@import "material-dashboard/buttons";
-@import "material-dashboard/misc";
-@import "material-dashboard/inputs";
-@import "material-dashboard/fileupload";
-@import "material-dashboard/alerts";
-@import "material-dashboard/tables";
-@import "material-dashboard/forms";
-@import "material-dashboard/checkboxes";
-@import "material-dashboard/radios";
-@import "material-dashboard/progress";
-@import "material-dashboard/togglebutton";
-@import "material-dashboard/pages";
-@import "material-dashboard/tags";
-@import "material-dashboard/timeline";
-@import "material-dashboard/ripples";
-@import "material-dashboard/panels";
-@import "material-dashboard/pagination";
-@import "material-dashboard/labels";
-@import "material-dashboard/pills";
-@import "material-dashboard/dialogs";
-@import "material-dashboard/navbars";
-@import "material-dashboard/popups";
-@import "material-dashboard/footers";
+@import "../_scss/md/typography";
+@import "../_scss/md/sidebar-and-main-panel";
+@import "../_scss/md/buttons";
+@import "../_scss/md/misc";
+@import "../_scss/md/inputs";
+@import "../_scss/md/forms";
+@import "../_scss/md/alerts";
+@import "../_scss/md/tables";
+@import "../_scss/md/checkboxes";
+@import "../_scss/md/radios";
+@import "../_scss/md/togglebutton";
+@import "../_scss/md/ripples";
+@import "../_scss/md/pagination";
+@import "../_scss/md/pills";
+@import "../_scss/md/dialogs";
+@import "../_scss/md/navbars";
+@import "../_scss/md/popups";
+@import "../_scss/md/footers";
 
 // Fancy Stuff
-@import "material-dashboard/dropdown";
-@import "material-dashboard/cards";
-@import "material-dashboard/tabs";
-@import "material-dashboard/responsive";
+@import "../_scss/md/dropdown";
+@import "../_scss/md/cards";
+@import "../_scss/md/tabs";
+@import "../_scss/md/chartist";
+@import "../_scss/md/responsive";
