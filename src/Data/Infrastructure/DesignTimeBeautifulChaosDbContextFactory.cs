@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
-namespace Web.Ui.Infrastructure
+namespace Data.Infrastructure
 {
-    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
+    public class DesignTimeApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
     {
         public ApplicationDbContext CreateDbContext(string[] args)
         {
@@ -21,4 +21,7 @@ namespace Web.Ui.Infrastructure
             return new ApplicationDbContext(builder.Options);
         }
     }
+
+
+
 }

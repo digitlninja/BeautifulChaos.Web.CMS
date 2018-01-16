@@ -32,7 +32,9 @@ namespace Data
 
             services.AddEntityFrameworkSqlServer();
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(connectionString));
+                options.UseSqlServer(connectionString))
+                .AddDbContext<BeautifulChaosContext>(options =>
+                    options.UseSqlServer(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
