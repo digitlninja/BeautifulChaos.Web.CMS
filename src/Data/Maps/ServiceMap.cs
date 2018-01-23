@@ -10,13 +10,11 @@ namespace Data.Maps
         {
             modelBuilder.HasKey(x => x.ServiceId);
             modelBuilder.ToTable("Services");
+
             modelBuilder
                 .HasOne(x => x.ServicesPage)
                 .WithMany(z => z.Services)
-                .HasForeignKey(z => z.ServicePageId);
-
-            modelBuilder.Property(x => x.Name).IsRequired();
-            modelBuilder.Property(x => x.Price).IsRequired();
+                .HasForeignKey(z => z.ServicesPageId);
         }
     }
 }

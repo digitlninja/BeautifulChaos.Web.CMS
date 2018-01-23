@@ -8,68 +8,19 @@ namespace Data.Maps
     {
         public void Configure(EntityTypeBuilder<ServicesPage> modelBuilder)
         {
-            // Keys
-            modelBuilder
+            var servicesPage = modelBuilder;
+
+            servicesPage
                 .HasKey(x => x.ServicesPageId);
 
-            // Relationships
-            modelBuilder
-                .HasMany(a => a.Services)
-                .WithOne(b => b.ServicesPage)
-                .HasForeignKey(b => b.ServiceId);
+            servicesPage
+                .HasMany(x => x.Services)
+                .WithOne(z => z.ServicesPage);
 
-            // Properties
-            modelBuilder
-                .Property(x => x.HeaderTitle)
-                .IsRequired();
-
-            modelBuilder
-                .Property(x => x.HeaderParagraph)
-                .IsRequired();
-
-            modelBuilder
-                .Property(x => x.Content1Header)
-                .IsRequired().IsRequired();
-
-            modelBuilder
-                .Property(x => x.Content1Paragraph)
-                .IsRequired();
-
-            modelBuilder
-                .Property(x => x.FeatureLeftIcon)
-                .IsRequired();
-
-            modelBuilder
-                .Property(x => x.FeatureLeftParagraph)
-                .IsRequired();
-
-            modelBuilder
-                .Property(x => x.FeatureLeftTitle)
-                .IsRequired();
-
-            modelBuilder
-                .Property(x => x.FeatureMidIcon)
-                .IsRequired();
-
-            modelBuilder
-                .Property(x => x.FeatureMidParagraph)
-                .IsRequired();
-
-            modelBuilder
-                .Property(x => x.FeatureMidtTitle)
-                .IsRequired();
-
-            modelBuilder
-                .Property(x => x.FeatureRightIcon)
-                .IsRequired();
-
-            modelBuilder
-                .Property(x => x.FeatureRightParagraph)
-                .IsRequired();
-
-            modelBuilder
-                .Property(x => x.FeatureRightTitle)
-                .IsRequired();
+            servicesPage
+                .HasOne(x => x.Page) // ServicesPage Side
+                .WithOne(c => c.ServicesPage)
+                .HasForeignKey<ServicesPage>(c => c.PageId); // Defines the Page side
         }
     }
 }

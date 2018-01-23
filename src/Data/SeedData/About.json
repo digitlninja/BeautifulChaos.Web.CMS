@@ -1,0 +1,25 @@
+﻿{
+  "aboutId": 1,
+  "pageId": 1,
+  "headerTitle": "Header Title",
+  "headerParagraph": "HeaderParagraph",
+
+  "content1Header": "Content1Header",
+  "content1Paragraph": "Content1Paragraph",
+
+  "teamTitle": "TeamTitle",
+  "teamParagraph": "TeamParagraph",
+
+  "descriptionBlock1Header": "Description Block 1 Header",
+  "descriptionBlock1Image": "Description Block 1 Image",
+  "descriptionBlock1Paragraph": "Description Block 1 Paragraph",
+  
+  "descriptionBlock2Header": "Description Block 2 Header",
+  "descriptionBlock2Image": "Description Block 2 Image",
+  "descriptionBlock2Paragraph": "Description Block 2 Paragraph",
+
+  "aboutImage1": "about.jpg",
+  "aboutImage2": "about.jpg",
+  "aboutImage3": "about.jpg"
+
+}

@@ -1,0 +1,78 @@
+﻿[
+  // About Page
+  {
+    "pageId": 1,
+    "title": "About Who Content Block Title ",
+    "paragraph":
+      "My About Who content block 1 paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph",
+    "image": "about.jpg",
+    "pageName": "About"
+  },
+  {
+    "pageId": 1,
+    "title": "My About Who Content Block Title 2",
+    "paragraph":
+      "My About Who 2 content block paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph",
+    "image": "about.jpg",
+    "pageName": "About"
+  },
+  {
+    "pageId": 1,
+    "title": "My About Who Content Block Title 3",
+    "paragraph":
+      "My About Who 3 content block paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph",
+    "image": "about.jpg",
+    "pageName": "About"
+  },
+  {
+    "pageId": 1,
+    "title": "About Team Content Block Title ",
+    "paragraph":
+      "My About Team content block 1 paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph",
+    "image": "about.jpg",
+    "pageName": "About"
+  },
+  {
+    "pageId": 1,
+    "title": "My About Team Content Block Title 2",
+    "paragraph":
+      "My About Team 2 content block paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph",
+    "image": "about.jpg",
+    "pageName": "About"
+  },
+  {
+    "pageId": 1,
+    "title": "My About Team Content Block Title 3",
+    "paragraph":
+      "My About Team 3 content block paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph",
+    "image": "about.jpg",
+    "pageName": "About"
+  },
+
+
+  // Services Page
+  {
+    "pageId": 2,
+    "title": "Services Content Block Title ",
+    "paragraph":
+      "My Services content block 2 paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph",
+    "image": "Services.jpg",
+    "pageName": "Services"
+  },
+  {
+    "pageId": 2,
+    "title": "My Services Content Block Title 2",
+    "paragraph":
+      "My Services 2 content block paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph",
+    "image": "Services.jpg",
+    "pageName": "Services"
+  },
+  {
+    "pageId": 2,
+    "title": "My Services Content Block Title 3",
+    "paragraph":
+      "My Services 3 content block paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph",
+    "image": "Services.jpg",
+    "pageName": "Services"
+  }
+]

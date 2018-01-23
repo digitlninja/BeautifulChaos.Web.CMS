@@ -1,0 +1,14 @@
+﻿{
+  "testimonialsPageId": 4, 
+  "contentSectionHeader": "Testimonials ConSection Header",
+  "contentSectionParagraph": "Testimonials ConSection Paragraph",
+  "headerTitle": "Testimonials Header Title",
+  "pageId": 4,
+  "rightContentTitle": "Testimonials RightConTitle",
+  "rightContentParagraph": "Testimonials RightConPara",
+  "leftContentTitle": "Testimonials LeftConTitle",
+  "leftContentParagraph": "Testimonials LeftConPara",
+  "middleContentTitle": "Testimonials MidConTitle",
+  "middleContentParagraph": "Testimonials MidConPara"
+
+}

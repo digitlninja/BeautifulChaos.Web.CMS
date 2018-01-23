@@ -6,28 +6,17 @@ namespace Data.Entities.Common
     {
         public Guid UUId { get; set; }
 
-        public DateTimeOffset CreatedAt { get; set; }
-        public DateTimeOffset UpdatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get; set; }
 
-        public DateTimeOffset DeletedAt { get; set; }
+        public DateTimeOffset? DeletedAt { get; set; }
 
         public EntityBase()
         {
-            if(this.CreatedAt == null)
-                this.CreatedAt = DateTimeOffset.Now;
-
-            this.UpdatedAt = DateTimeOffset.Now;
-
-            
+            this.UUId = new Guid();
+            this.CreatedAt = DateTimeOffset.Now;
+            this.UpdatedAt = DateTimeOffset.Now; // set on save/update
         }
-
-        public EntityBase(string tableName)
-        {
-            if (this.CreatedAt == null)
-                this.CreatedAt = DateTimeOffset.Now;
-
-            this.UpdatedAt = DateTimeOffset.Now;
-
-        }
+       
     }
 }

@@ -1,4 +1,6 @@
-﻿using Data.Contexts;
+﻿using System.Threading.Tasks;
+using Data.Contexts;
+using Data.Seeding;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -43,6 +45,8 @@ namespace Data
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                DbInitializer.SeedFreshData(app);
             }
 
             app.Run(async (context) =>

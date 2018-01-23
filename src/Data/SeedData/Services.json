@@ -1,0 +1,143 @@
+﻿[
+
+  // Cut n Blow
+  {
+    "name": "Cut n Blow Service 1",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Cut n Blow Service 2",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Cut n Blow Service 3",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Cut n Blow Service4",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Cut n Blow Service 5",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Cut n Blow Service 6",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Cut n Blow Service 7",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Cut n Blow Service 8",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Cut n Blow Service 9",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+
+  // Color
+  {
+    "name": "Color Service 1",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Color Service 2",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Color Service 3",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Color Service4",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Color Service 5",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Color Service 6",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Color Service 7",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Color Service 8",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Color Service 9",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+
+  // Extensions
+  {
+    "name": "Extensions Service 1",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Extensions Service 2",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Extensions Service 3",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Extensions Service4",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Extensions Service 5",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Extensions Service 6",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Extensions Service 7",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Extensions Service 8",
+    "price": 120,
+    "ServicesPageId": 2
+  },
+  {
+    "name": "Extensions Service 9",
+    "price": 120,
+    "ServicesPageId": 2
+  }
+]

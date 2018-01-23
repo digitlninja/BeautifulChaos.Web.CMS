@@ -8,7 +8,7 @@ namespace Data.Entities
 
         // HasOne
         public ServicesPage ServicesPage { get; set; }
-        public int ServicePageId { get; set; }
+        public int ServicesPageId { get; set; }
 
         public string Name { get; set; }
         public double Price { get; set; }

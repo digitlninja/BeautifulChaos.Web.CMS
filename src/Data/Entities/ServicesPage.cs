@@ -9,7 +9,6 @@ namespace Data.Entities
 
         // HasMany
         public virtual ICollection<Service> Services { get; set; }
-        public int ServiceId { get; set; }
 
         public string HeaderTitle { get; set; }
         public string HeaderParagraph { get; set; }
@@ -21,14 +20,9 @@ namespace Data.Entities
         public string Content1Header { get; set; }
         public string Content1Paragraph { get; set; }
 
-        public ContentRow FeatureLeft { get; set; }
-        public ContentRow FeatureMiddle { get; set; }
-        public ContentRow FeatureRight { get; set; }
-
-        public ServicesPage()
-        {
-            this.FeatureLeft = new ContentRow();
-        }
-
-        }
+        // BelongsToOne
+        public Page Page { get; set; }
+        public int PageId { get; set; }
+       
     }
+}
