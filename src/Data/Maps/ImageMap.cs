@@ -11,6 +11,7 @@ namespace Data.Maps
             var image = modelBuilder;
 
             image.HasKey(x => x.ImageId);
+            image.ToTable("Images");
 
             image.HasOne(x => x.Work)
                 .WithMany(z => z.Images)

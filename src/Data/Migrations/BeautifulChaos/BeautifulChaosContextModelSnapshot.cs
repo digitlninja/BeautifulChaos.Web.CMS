@@ -114,7 +114,7 @@ namespace Data.Migrations.BeautifulChaos
 
                     b.HasIndex("PageId");
 
-                    b.ToTable("Image");
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Data.Entities.Page", b =>
