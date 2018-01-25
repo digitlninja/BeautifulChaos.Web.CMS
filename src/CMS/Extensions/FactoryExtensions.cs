@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using CMS.Models;
 using Data.Entities;
 using Data.Entities.Identity;
@@ -47,5 +48,28 @@ namespace CMS.Extensions
                 AboutImage3 = entity.AboutImage3
             };
         }
+
+        public static ServicesPageModel ToModel(this ServicesPage entity)
+        {
+            if (entity == null)
+                throw new ArgumentNullException(nameof(entity));
+
+            return new ServicesPageModel()
+            {
+                UUId = entity.UUId,
+                PageId = entity.PageId,
+                HeaderTitle = entity.HeaderTitle,
+                HeaderParagraph = entity.HeaderParagraph,
+                ServiceSection1Title = entity.ServiceSection1Title,
+                ServiceSection2Title = entity.ServiceSection2Title,
+                ServiceSection3Title = entity.ServiceSection3Title,
+                Content1Header = entity.Content1Header,
+                Content1Paragraph = entity.Content1Paragraph,
+                Page = entity.Page,
+                Services = entity.Services?.ToList()
+            };
+        }
+
+
     }
 }
