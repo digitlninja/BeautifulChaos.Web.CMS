@@ -13,7 +13,7 @@ namespace Data.Entities.Common
 
         public EntityBase()
         {
-            this.UUId = new Guid();
+            this.UUId = Guid.NewGuid();
             this.CreatedAt = DateTimeOffset.Now;
             this.UpdatedAt = DateTimeOffset.Now; // set on save/update
         }

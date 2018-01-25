@@ -1,17 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Data.Contexts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CMS.Controllers.Api
 {
     public class AdminApiController : Controller
     {
-        public IActionResult Index()
+        public BeautifulChaosContext Context { get; }
+
+        public AdminApiController(BeautifulChaosContext context)
         {
-            return View();
+            if(context == null)
+                throw new ArgumentNullException(nameof(context));
+
+            this.Context = context;
         }
+
+//        [HttpGet, Route("about")]
+//        public IActionResult About()
+//        {
+//           
+//        }
 
 
     }

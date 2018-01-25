@@ -1,6 +1,8 @@
-﻿namespace Data.Entities
+﻿using Data.Entities.Common;
+
+namespace Data.Entities
 {
-    public class Image
+    public class Image : EntityBase
     {
         public int ImageId { get; set; }
 

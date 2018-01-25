@@ -1,6 +1,8 @@
-﻿namespace Data.Entities
+﻿using Data.Entities.Common;
+
+namespace Data.Entities
 {
-    public class Testimonial
+    public class Testimonial :EntityBase
     {
         public int TestimonialId { get; set; }
 

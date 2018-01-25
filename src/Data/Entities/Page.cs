@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Data.Entities.Common;
 
 namespace Data.Entities
 {
-    public class Page
+    public class Page : EntityBase
     {
         public int PageId { get; set; }
         public string PageName { get; set; }

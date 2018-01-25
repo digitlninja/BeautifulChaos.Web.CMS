@@ -1,10 +1,14 @@
-﻿using Data.Entities.Common;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Data.Entities;
 
-namespace Data.Entities
+namespace CMS.Models
 {
-    public class About : EntityBase
+    public class AboutModel
     {
-        public int AboutId { get; set; }
+        public Guid UUId { get; set; }
 
         // BelongsToOne
         public Page Page { get; set; }
