@@ -5,7 +5,6 @@ using CMS.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-
 namespace CMS.Infrastructure.Bootstrap
 {
     public static class BeautifulChaosServices
@@ -24,8 +23,10 @@ namespace CMS.Infrastructure.Bootstrap
             services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddScoped<IAboutRepository, AboutRepository>();
-            services.AddScoped<IImageRepository, ImageRepository>();
+            services.AddScoped<IImagesRepository, ImagesRepository>();
             services.AddScoped<IServicesPageRepository, ServicesPageRepository>();
+            services.AddScoped<ITestimonialsPageRepository, TestimonialsPageRepository>();
+            services.AddScoped<ITestimonialsRepository, TestimonialsRepository>();
             services.AddScoped<IWorkRepository, WorkRepository>();
 
             return services;

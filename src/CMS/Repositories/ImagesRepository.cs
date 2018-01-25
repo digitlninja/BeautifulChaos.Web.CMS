@@ -8,9 +8,9 @@ using Data.Entities;
 
 namespace CMS.Repositories
 {
-    public class ImageRepository : BeautifulChaosRepository, IImageRepository
+    public class ImagesRepository : BeautifulChaosRepository, IImagesRepository
     {
-        public ImageRepository(BeautifulChaosContext context)
+        public ImagesRepository(BeautifulChaosContext context)
         :base(context)
         {
         }

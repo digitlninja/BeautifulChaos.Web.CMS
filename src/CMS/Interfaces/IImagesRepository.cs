@@ -3,7 +3,7 @@ using Data.Entities;
 
 namespace CMS.Interfaces
 {
-    public interface IImageRepository
+    public interface IImagesRepository
     {
         List<Image> Entities();
         Image Entity();
