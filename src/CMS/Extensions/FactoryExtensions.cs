@@ -22,7 +22,6 @@ namespace CMS.Extensions
             };
         }
 
-
         public static AboutModel ToModel(this About entity)
         {
             if (entity == null)
@@ -69,7 +68,5 @@ namespace CMS.Extensions
                 Services = entity.Services?.ToList()
             };
         }
-
-
     }
 }

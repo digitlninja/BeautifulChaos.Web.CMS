@@ -1,31 +1,29 @@
-﻿using System;
-using System.Linq;
-using CMS.Extensions;
+﻿using System.Linq;
 using CMS.Interfaces;
-using CMS.Models;
 using Data.Contexts;
 using Data.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace CMS.Repositories
 {
-    public class AboutRepository : BeautifulChaosRepository, IAboutRepository
+    public class ServicesPageRepository : BeautifulChaosRepository, IServicesPageRepository
     {
         public BeautifulChaosContext Context { get; }
 
-        public AboutRepository(BeautifulChaosContext context) 
+        public ServicesPageRepository(BeautifulChaosContext context)
             : base(context)
         {
         }
 
-        public About Entity()
+        public ServicesPage Entity()
         {
-            var query = this.Context.About;
+            var query = this.Context.ServicesPage.Include(x => x.Services);
 
             var entity = query.FirstOrDefault();
             if (entity == null)
                 return null;
 
             return entity;
-        }
+        }   
     }
 }
