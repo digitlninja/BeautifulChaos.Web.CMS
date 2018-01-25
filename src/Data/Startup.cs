@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Data.Contexts;
+﻿using Data.Contexts;
 using Data.Seeding;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

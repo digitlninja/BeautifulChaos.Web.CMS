@@ -1,0 +1,19 @@
+﻿[
+
+  {
+    "pageId": 4,
+    "title": "My Work Image1",
+    "altText": "My Work Image1 Alt",
+    "url": "http://myworkimage1.com",
+    "Page": "Work"
+
+  },
+  {
+    "pageId": 4,
+    "title": "My Work Image2",
+    "altText": "My Work Image2 Alt",
+    "url": "http://myworkimage2.com",
+    "Page": "Work"
+
+  }
+]

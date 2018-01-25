@@ -45,6 +45,9 @@ namespace Data.Seeding
             SeedServices(applicationBuilder, context);
             SeedTestimonialsPage(applicationBuilder, context);
             SeedTestimonials(applicationBuilder, context);
+            SeedWorkPage(applicationBuilder, context);
+            SeedImages(applicationBuilder, context);
+
             SeedContentColumns(applicationBuilder, context);
         }
 
@@ -210,6 +213,63 @@ namespace Data.Seeding
             catch (Exception ex)
             {
                 var msg = ex;
+            }
+        }
+
+        public static void SeedWorkPage(IApplicationBuilder applicationBuilder, BeautifulChaosContext context)
+        {
+            using (var transaction = context.Database.BeginTransaction())
+            {
+                if (context.Work.Any())
+                    return;
+
+                try
+                {
+                    var source = Directory.GetCurrentDirectory();
+                    source += @"\SeedData\Work.json";
+
+                    var data = File.ReadAllText(source);
+
+                    context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].Work ON");
+
+                    var work = JsonConvert.DeserializeObject<Work>(data);
+                    context.Work.Add(work);
+                    context.SaveChanges();
+
+                    context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].Work OFF");
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    var msg = ex;
+                }
+            }
+        }
+
+        public static void SeedImages(IApplicationBuilder applicationBuilder, BeautifulChaosContext context)
+        {
+            using (var transaction = context.Database.BeginTransaction())
+            {
+                if (context.Images.Any())
+                    return;
+
+                try
+                {
+                    var source = Directory.GetCurrentDirectory();
+                    source += @"\SeedData\Image.json";
+
+                    var data = File.ReadAllText(source);
+
+                    var image = JsonConvert.DeserializeObject<Image>(data);
+                    context.Images.Add(image);
+                    context.SaveChanges();
+
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    var msg = ex;
+                }
             }
         }
 

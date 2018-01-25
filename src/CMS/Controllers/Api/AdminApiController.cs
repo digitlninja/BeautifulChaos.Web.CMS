@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CMS.Controllers.Api
 {
-    public class AdminController : Controller
+    public class AdminApiController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
+
+
     }
 }

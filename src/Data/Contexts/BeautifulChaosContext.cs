@@ -8,7 +8,6 @@ namespace Data.Contexts
     {
         public BeautifulChaosContext(DbContextOptions<BeautifulChaosContext> options) : base (options)
         {
-            
         }
 
         public DbSet<ServicesPage> ServicesPage { get; set; }
@@ -18,6 +17,8 @@ namespace Data.Contexts
         public DbSet<TestimonialsPage> TestimonialsPage { get; set; }
         public DbSet<Testimonial> Testimonial { get; set; }
         public DbSet<Page> Page { get; set; }
+        public DbSet<Work> Work { get; set; }
+        public DbSet<Image> Images { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,6 +32,9 @@ namespace Data.Contexts
 
             modelBuilder.ApplyConfiguration(new TestimonialsPageMap());
             modelBuilder.ApplyConfiguration(new TestimonialMap());
+
+            modelBuilder.ApplyConfiguration(new WorkMap());
+            modelBuilder.ApplyConfiguration(new ImageMap());
         }
     }
 }
