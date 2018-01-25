@@ -8,8 +8,6 @@ namespace CMS.Repositories
 {
     public class ServicesPageRepository : BeautifulChaosRepository, IServicesPageRepository
     {
-        public BeautifulChaosContext Context { get; }
-
         public ServicesPageRepository(BeautifulChaosContext context)
             : base(context)
         {

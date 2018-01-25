@@ -6,7 +6,6 @@ namespace CMS.Interfaces
 {
     public interface IServicesPageRepository
     {
-        BeautifulChaosContext Context { get; }
         ServicesPage Entity();
     }
 }

@@ -10,8 +10,6 @@ namespace CMS.Repositories
 {
     public class AboutRepository : BeautifulChaosRepository, IAboutRepository
     {
-        public BeautifulChaosContext Context { get; }
-
         public AboutRepository(BeautifulChaosContext context) 
             : base(context)
         {
