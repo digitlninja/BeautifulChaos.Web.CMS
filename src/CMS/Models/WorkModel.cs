@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CMS.Models
 {
     public class WorkModel
     {
-        public int UUId { get; set; }
+        public Guid UUId { get; set; }
         public int PageId { get; set; }
 
         // HasMany

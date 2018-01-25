@@ -23,6 +23,11 @@ namespace CMS.Infrastructure.Bootstrap
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IUserRepository, UserRepository>();
 
+            services.AddScoped<IAboutRepository, AboutRepository>();
+            services.AddScoped<IImageRepository, ImageRepository>();
+            services.AddScoped<IServicesPageRepository, ServicesPageRepository>();
+            services.AddScoped<IWorkRepository, WorkRepository>();
+
             return services;
         }
     }

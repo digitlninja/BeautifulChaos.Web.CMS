@@ -1,9 +1,11 @@
 ﻿
+using System;
+
 namespace CMS.Models
 {
     public class ImageModel
     {
-        public int UUId { get; set; }
+        public Guid UUId { get; set; }
 
         // BelongsToOne
         public WorkModel Work { get; set; }

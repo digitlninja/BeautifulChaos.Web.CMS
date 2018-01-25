@@ -6,7 +6,6 @@ namespace CMS.Interfaces
 {
     public interface IAboutRepository
     {
-        BeautifulChaosContext Context { get; }
         About Entity();
     }
 }

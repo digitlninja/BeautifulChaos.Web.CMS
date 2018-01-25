@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using CMS.Models;
 using Data.Entities;
@@ -67,6 +68,55 @@ namespace CMS.Extensions
                 Page = entity.Page,
                 Services = entity.Services?.ToList()
             };
+        }
+
+        public static WorkModel ToModel(this Work entity)
+        {
+            if (entity == null)
+                throw new ArgumentNullException(nameof(entity));
+
+            var workImages = entity.Images.ToList();
+            return new WorkModel()
+            {
+                UUId = entity.UUId,
+                PageId = entity.PageId,
+                HeaderTitle = entity.HeaderTitle,
+                HeaderParagraph = entity.HeaderParagraph,
+                Images = workImages.ToModelList()
+            };
+        }
+
+        public static ImageModel ToModel(this Image entity)
+        {
+            if (entity == null)
+                throw new ArgumentNullException(nameof(entity));
+
+            return new ImageModel()
+            {
+                UUId = entity.UUId,
+                PageId = entity.PageId,
+                Title = entity.Title,
+                AltText = entity.AltText,
+                Url = entity.Url,
+                Page = entity.Page
+            };
+        }
+
+        public static List<ImageModel> ToModelList(this List<Image> entities)
+        {
+            if (entities.Count <= 0 || entities == null)
+                throw new ArgumentNullException(nameof(entities));
+
+            var models = new List<ImageModel>();
+            foreach (var entity in entities)
+            {
+                models.Add(entity.ToModel());
+            }
+
+            if (models.Count <= 0)
+                return null;
+
+            return models;
         }
     }
 }
